@@ -18,6 +18,10 @@ public class ProductService {
         return (List<Product>) productRepository.findAll();
     }
 
+    public Product findByProduct(Integer id){
+        return productRepository.findById(id).orElse(null);
+    }
+
     @Autowired
     public void setProductRepository(ProductRepository productRepository){
         this.productRepository = productRepository;
