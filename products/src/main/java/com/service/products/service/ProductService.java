@@ -1,10 +1,10 @@
-package service;
+package com.service.products.service;
 
-import model.Product;
+import com.service.products.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import repository.ProductRepository;
+import com.service.products.repository.ProductRepository;
 
 import java.util.List;
 
