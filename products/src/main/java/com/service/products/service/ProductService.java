@@ -1,10 +1,10 @@
-package service;
+package com.service.products.service;
 
-import model.Product;
+import com.service.products.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import repository.ProductRepository;
+import com.service.products.repository.ProductRepository;
 
 import java.util.List;
 
@@ -20,6 +20,10 @@ public class ProductService {
 
     public Product findByProduct(Integer id){
         return productRepository.findById(id).orElse(null);
+    }
+
+    public Product saveProduct(Product product){
+        return productRepository.save(product);
     }
 
     @Autowired
